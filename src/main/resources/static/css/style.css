@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--lines);
+}
+:root {
+  --lines: slateblue;
+  --altura: 80%;
+  --comprimento: 35%;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(1, 1, 1), rgb(26, 26, 26));
+}
+main {
+  background: transparent;
+  padding: 1%;
+  height: var(--altura);
+  width: var(--comprimento);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid var(--lines);
+}
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid > form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.icon {
+  transition: 0.5s;
+  font-size: 3rem;
+}
+.icon:hover {
+  filter: drop-shadow(0 0 2px);
+}
+input {
+  background: transparent;
+  border: 1px solid var(--lines);
+  width: calc(var(--comprimento) * 1.5);
+  padding: 1.5%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+input::placeholder {
+  color: var(--lines);
+  font-size: 0.7rem;
+}
+input:focus {
+  outline: 1px solid var(--lines);
+  box-shadow: 0 0 10px var(--lines);
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom > button {
+  padding: 2% 4%;
+  background: transparent;
+  border: 1px solid var(--lines);
+  transition: 0.3s;
+}
+.bottom > button:hover {
+  box-shadow: 0 0 5px var(--lines);
+}
+
+body > button {
+  color: var(--lines);
+  border: 1px solid var(--lines);
+  background: transparent;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding:1.2% 1.4%;
+  position: relative;
+  right: 28%;
+  bottom: 40%;
+  transition: 0.5s;
+}
+
+
